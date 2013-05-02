@@ -2,7 +2,20 @@
 layout: default
 classes: front
 ---
-<div style="float: right">
+<div class="sidebar" style="float: left;">
+  <h2>Uutta</h2>
+{% for post in site.posts limit: 1 %}
+  <article class="news">
+    <hgroup>
+      <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+      <p class="writer">{{ post.date | date_to_string }} / {{ post.author }}</p>
+    </hgroup>
+    {{ post.content | truncate: 300 }}
+    <p class="call-to-action"><a href="{{ post.url }}">Read full article</a></p>
+  </article>
+{% endfor %}
+</div>
+<div class="sidebar" style="float: right">
   <h3>Kabinetti muualla</h3>
   <ul>
     <li><a href="http://groups.google.com/group/kabinettiorg">subscribe</a> kabi<em>netti</em>.org</li>
@@ -13,6 +26,7 @@ classes: front
   <p><a class="twitter-timeline"  href="https://twitter.com/search?q=%23kabinettiorg"  data-widget-id="329891353066602496">Tweets about "#kabinettiorg"</a>
   <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></p>
 </div>
+<div id="content">
 <h1>Kabinetti <span style="font-size: 50%">– maailmanvalloitus alkaa Turusta</span></h1>
 <h2>Mikä on Kabinetti?</h2>
 <p>Kabinetti on turkulaisten internet-ammattilaisten yhteisö, joka koostuu webin kanssa puurtavista yksilöistä, henkilöiden tarkkaan toimenkuvaan katsomatta. Tervetulleita ovat niin koodarit, graafikot, kirjoittajat kuin perinteiset jack-of-all-trades-master-of-none-pseudorenessanssi-ihmisetkin. Tietysti myös henkilöt, jotka eivät tällä hetkellä tee webbiduunia, mutta ovat muuten kiinnostuneita seksikkäästä sektoristamme. *Cough*.</p>
@@ -23,3 +37,4 @@ classes: front
 <p>Koulu on viihtyisä, tilava ja sieltä saa hyvää olutta. Kesällä pihalla, talvella historian luokassa – tai missä sattuu tilaa olemaan. Lisäksi olemme tietysti Internetissä, jossa keskustelu jatkuu enemmän tai vähemmän aktiivisena myös tapaamisten välillä!</p>
 <h2>Miksi Internet-ammattilaisten sivut ovat niin askeettiset?</h2>
 <p>Aiemmin väitimme, että syynä olisi kiireiden lisäksi Kabinetin nuoruus. Se ehkä jo vähän meni, mutta kiirettä pitää edelleen eikä Internet tule koskaan valmiiksi. Toivotamme kuitenkin kaikki tervetulleiksi rakentamaan niitä kanssamme.</p>
+</div>
