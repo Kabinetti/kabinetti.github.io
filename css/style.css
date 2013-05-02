@@ -3,6 +3,40 @@ div.sidebar {
   height: 100%;
   border: 1px dotted gray;
 }
-div#content {
+div#content, nav {
   margin: 0 310px;
+}
+p.writer {
+  font-style: italic;
+}
+p.call-to-action {
+  float: right;
+  margin-top: 0;
+}
+.slogan {
+  font-size: 50%;
+}
+.sidebar ul, nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav li {
+  display: inline;
+  margin: 0 1em;
+}
+nav li a.active {
+  color: black !important;
+  text-decoration: none !important;
+}
+nav li a.front {
+  font-weight: bold;
+}
+nav {
+  padding: 0.5em;
+  margin-bottom: 1em;
+  background-color: #e0e0e0;
+}
+h1, h2, h3, h4, h5, h6, h7, p.call-to-action {
+  font-family: sans-serif;
 }

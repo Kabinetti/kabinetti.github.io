@@ -1,0 +1,6 @@
+navigation:
+  - title : "Kabinetti.org"
+    url   : "/index.html"
+    class : "front"
+  - title : "Uutisarkisto"
+    url   : "/archive/index.html"

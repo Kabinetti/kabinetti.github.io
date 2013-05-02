@@ -30,3 +30,28 @@
       </div>
     </nav>
 	</header>
+<div class="sidebar" style="float: left;">
+  <h2>Uutta</h2>
+{% for post in site.posts limit: 1 %}
+  <article class="news">
+    <hgroup>
+      <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+      <p class="writer">{{ post.date | date: "%d.%m.%Y" }} / {{ post.author }}</p>
+    </hgroup>
+    {{ post.content | truncate: 150 }}
+    <p class="call-to-action"><a href="{{ post.url }}">Lue lisää</a></p>
+  </article>
+{% endfor %}
+</div>
+<div class="sidebar" style="float: right">
+  <h3>Kabinetti muualla</h3>
+  <ul>
+    <li><a href="http://groups.google.com/group/kabinettiorg">subscribe</a> kabi<em>netti</em>.org</li>
+    <li><a href="http://www.facebook.com/group.php?gid=137564585225">join</a> Facebook group</li>
+    <li><a href="https://plus.google.com/communities/110454993238461765363">join</a> Google+ community</li>
+    <li><a href="http://www.linkedin.com/groups?gid=1842539">connect</a> on LinkedIn</li>
+  </ul>
+  <p><a class="twitter-timeline"  href="https://twitter.com/search?q=%23kabinettiorg"  data-widget-id="329891353066602496">Tweets about "#kabinettiorg"</a>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></p>
+</div>
+<div id="content">

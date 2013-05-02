@@ -8,12 +8,12 @@ classes: news-item
 </article>
 
 <aside class="column third">
-  <h2>Archive</h2>
+  <h2>Uutisarkisto</h2>
   {% for post in site.posts %}
     <article class="news">
       <hgroup>
         <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-        <p class="writer">{{ post.date | date_to_string }} / {{ post.author }}</p>
+        <p class="writer">{{ post.date | date: "%d.%m.%Y" }} / {{ post.author }}</p>
       </hgroup>
           </article>
         {% endfor %}
